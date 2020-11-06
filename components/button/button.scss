@@ -1,0 +1,46 @@
+.button {
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 3em;
+  cursor: pointer;
+  line-height: 1;
+  font-weight: 450;
+  /* Blue */
+  &-primary {
+    color: white;
+    background-color: #1ea7fd;
+  }
+
+  /* Gray */
+  &-secondary {
+    background-color: #e7e7e7;
+    color: black;
+  }
+
+  /* Green */
+  &-success {
+    color: white;
+    background-color: #4caf50;
+  }
+
+  /* Red */
+  &-danger {
+    color: white;
+    background-color: #f44336;
+  }
+
+  &-small {
+    font-size: 12px;
+    padding: 10px 16px;
+  }
+  &-medium {
+    font-size: 14px;
+    padding: 11px 20px;
+  }
+  &-large {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+}

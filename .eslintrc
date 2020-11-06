@@ -1,0 +1,37 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "prettier"
+  ],
+  "plugins": ["react", "prettier"],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "rules": {
+    "react/prop-types": 0,
+    "generator-star-spacing": 0,
+    "no-console": 0,
+    "quotes": ["warn", "single"],
+    "no-undef": 0,
+    "no-unused-vars": "warn",
+    "require-atomic-updates": 0,
+    "prettier/prettier": "warn"
+  },
+  "settings": {
+    "react": {
+      "version": "16.12.0"
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true,
+    "es6": true
+  }
+}

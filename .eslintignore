@@ -1,0 +1,5 @@
+/dist
+/lib
+/es
+/storybook-static
+jest.config.js

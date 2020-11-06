@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "declaration": true,
+    "declarationDir": "dist",
+    "module": "esnext",
+    "target": "es6",
+    "resolveJsonModule": true,
+    "lib": ["dom", "es2017", "esnext"],
+    "sourceMap": true,
+    "jsx": "react-jsx",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "paths": {
+      "@stoui": ["components/index.ts"],
+      "@stoui/*": ["components/*"],
+      "@/util/*": ["util/*"]
+    }
+  },
+  "include": [
+    "components/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "components/**/__tests__/*"
+  ]
+}
