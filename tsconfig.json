@@ -18,12 +18,12 @@
       "@/util/*": ["util/*"]
     }
   },
-  "include": [
-    "components/**/*"
-  ],
   "exclude": [
     "node_modules",
     "dist",
     "components/**/__tests__/*"
-  ]
+  ],
+  "include": [
+    "components/**/*"
+  ],
 }
