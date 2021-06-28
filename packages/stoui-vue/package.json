@@ -1,0 +1,40 @@
+{
+  "name": "@stoui/vue",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Stone UI for Vue",
+  "scripts": {},
+  "tags": [
+    "stoui",
+    "vue",
+    "framework"
+  ],
+  "keywords": [
+    "vue",
+    "vue-ui",
+    "vue-component",
+    "design",
+    "yonui",
+    "stoui",
+    "library",
+    "component",
+    "components",
+    "ui",
+    "framework",
+    "frontend",
+    "web"
+  ],
+  "author": {
+    "name": "Shen",
+    "url": "https://haiyon.com",
+    "email": "hi@haiyon.com"
+  },
+  "maintainers": [
+    {
+      "name": "Shen",
+      "url": "https://haiyon.com",
+      "email": "hi@haiyon.com"
+    }
+  ],
+  "license": "MIT"
+}

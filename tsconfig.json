@@ -1,29 +1,9 @@
 {
-  "compilerOptions": {
-    "baseUrl": ".",
-    "declaration": true,
-    "declarationDir": "dist",
-    "module": "esnext",
-    "target": "es6",
-    "resolveJsonModule": true,
-    "lib": ["dom", "es2017", "esnext"],
-    "sourceMap": true,
-    "jsx": "react-jsx",
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "paths": {
-      "@stoui": ["components/index.ts"],
-      "@stoui/*": ["components/*"],
-      "@/util/*": ["util/*"]
-    }
-  },
-  "exclude": [
-    "node_modules",
-    "dist",
-    "components/**/__tests__/*"
-  ],
-  "include": [
-    "components/**/*"
-  ],
+  "extends": "./tsconfig.base.json",
+  "exclude": ["node_modules"],
+  "references": [
+    { "path": "packages/stoui"},
+    { "path": "packages/stoui-react" },
+    { "path": "packages/stoui-vue" }
+  ]
 }

@@ -1,0 +1,20 @@
+{
+  "name": "@stoui/core",
+  "version": "0.0.1",
+  "description": "Stone UI Library",
+  "scripts": {},
+  "keywords": [],
+  "author": {
+    "name": "Shen",
+    "url": "https://haiyon.com",
+    "email": "hi@haiyon.com"
+  },
+  "maintainers": [
+    {
+      "name": "Shen",
+      "url": "https://haiyon.com",
+      "email": "hi@haiyon.com"
+    }
+  ],
+  "license": "MIT"
+}

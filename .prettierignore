@@ -1,4 +1,12 @@
-/dist
-/lib
-/es
-/storybook-static
+/dist/*
+.local
+.output.js
+/node_modules/**
+
+dist
+
+.env*
+
+**/*.svg
+**/*.sh
+

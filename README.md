@@ -1,15 +1,41 @@
-# Stone UI Library
+# Stone UI
 
-## Start
+## Getting Started
+
+### Installation
+
+```bash
+yarn install
+```
+
+### Running the app
+
+```bash
+# development
+npm run dev
+npm run dev:serve
+npm run dev:client
+```
+
+### Requirements
+
+## Features
+
+## Contributing
+
+## Roadmap
 
 ## Documentation
 
-For full documentation, visit [https://stoui.com](https://stoui.com).
+## Packages
 
-## Maintainers
-
-[@Shen](https://github.com/haiyon)
+| Directory   | Description      |
+| ----------- | ---------------- |
+| stoui-core  | common           |
+| stoui-react | react components |
+| stoui-vue   | vue components   |
+|             |                  |
 
 ## License
 
-[MIT](LICENSE) © Shen
+[MIT](LICENSE)
