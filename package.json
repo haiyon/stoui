@@ -7,6 +7,7 @@
     "example/*"
   ],
   "scripts": {
+    "prepare": "husky install",
     "clean:all": "rimraf ./**/{*error.log,dist,node_modules}",
     "build": "yarn workspace run build",
     "dev:react": "yarn workspace @stoui/react storybook",
@@ -26,7 +27,7 @@
     "autoprefixer": "10.2.6",
     "cross-env": "7.0.3",
     "cypress": "7.5.0",
-    "husky": "4.3.8",
+    "husky": "6.0.0",
     "lint-staged": "11.0.0",
     "monorepo-run": "0.4.2",
     "postcss": "8.3.5",
