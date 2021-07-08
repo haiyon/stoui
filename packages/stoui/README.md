@@ -1,4 +1,4 @@
-# React components that implement Stone UI
+# Base that implement Stone UI
 
 ## Start
 

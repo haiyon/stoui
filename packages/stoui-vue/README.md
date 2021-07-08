@@ -1,4 +1,4 @@
-# React components that implement Stone UI
+# Vue components that implement Stone UI
 
 ## Start
 

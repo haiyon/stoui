@@ -29,12 +29,13 @@ npm run dev:client
 
 ## Packages
 
-| Directory   | Description      |
-| ----------- | ---------------- |
-| stoui-core  | common           |
-| stoui-react | react components |
-| stoui-vue   | vue components   |
-|             |                  |
+| Directory       | Description       |
+| --------------- | ----------------- |
+| stoui-core      | common            |
+| stoui-react     | react components  |
+| stoui-vue       | vue components    |
+| stoui-animation | animation support |
+|                 |                   |
 
 ## License
 
