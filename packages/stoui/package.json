@@ -1,7 +1,7 @@
 {
   "name": "@stoui/core",
   "version": "0.0.1",
-  "description": "Stone UI Library",
+  "description": "Base that implement Stone UI",
   "scripts": {},
   "keywords": [],
   "author": {
