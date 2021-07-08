@@ -6,7 +6,7 @@
     "rootDir": "components"
   },
   "include": [
-    "components/**/*",
+    "components/button/*",
     "utils/**/*"
   ],
   "exclude": [
