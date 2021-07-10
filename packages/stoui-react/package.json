@@ -4,7 +4,7 @@
   "description": "React components that implement Stone UI",
   "scripts": {
     "storybook": "start-storybook -p 9600 -c .storybook",
-    "build": "rimraf dist && cross-env NODE_ENV=production rollup --config rollup.config.js",
+    "build": "rimraf dist && cross-env NODE_ENV=production rollup --config rollup.config.js && npm run copy",
     "build:docs": "build-storybook -c .storybook -o .out",
     "copy": "cpy package.json README.md LICENSE dist/",
     "test": "jest --passWithNoTests",
