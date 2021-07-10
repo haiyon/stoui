@@ -14,9 +14,9 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "format": "npm run lint -- --fix && npm run prettier -- --write",
     "prettier": "prettier \"**/*.{js,jsx,ts,tsx,md,css,scss,yaml,yml}\"",
-    "release:version": "lerna version --exact --no-changelog --no-push --no-git-tag-version",
-    "release:build": "lerna run --parallel build",
-    "release:publish": "lerna publish from-package --dist-tag next --contents dist",
+    "release:version": "lerna version --no-private --exact --no-changelog --no-push --no-git-tag-version",
+    "release:build": "lerna run --parallel build --no-private",
+    "release:publish": "lerna publish --no-private from-package --dist-tag next --contents dist",
     "commit": "git-cz",
     "tsc": "tsc --build"
   },

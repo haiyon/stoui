@@ -1,6 +1,7 @@
 {
   "name": "@stoui/core",
   "version": "0.0.1",
+  "private": true,
   "description": "Base that implement Stone UI",
   "scripts": {},
   "keywords": [],

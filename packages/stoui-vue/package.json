@@ -1,6 +1,7 @@
 {
   "name": "@stoui/vue",
   "version": "0.0.1",
+  "private": true,
   "description": "Vue components that implement Stone UI",
   "scripts": {},
   "tags": [
