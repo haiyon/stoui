@@ -1,7 +1,6 @@
 {
   "name": "@stoui/animation",
   "version": "0.0.1",
-  "private": true,
   "description": "Animation used by Stone UI Components for the web",
   "scripts": {},
   "tags": [

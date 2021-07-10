@@ -1,6 +1,6 @@
 {
   "name": "@stoui/react",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "React components that implement Stone UI",
   "scripts": {
     "storybook": "start-storybook -p 9600 -c .storybook",
@@ -10,7 +10,6 @@
     "test": "jest --passWithNoTests",
     "test:watch": "jest --watch",
     "release": "standard-version",
-    "prepublishOnly": "npm run build && npm run copy",
     "type-check": "tsc -p tsconfig.json --pretty --noEmit",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "format": "npm run lint -- --fix && npm run prettier -- --write",
@@ -39,7 +38,6 @@
     "frontend",
     "web"
   ],
-  "dependencies": {},
   "devDependencies": {
     "@babel/core": "7.14.6",
     "@commitlint/cli": "12.1.4",
