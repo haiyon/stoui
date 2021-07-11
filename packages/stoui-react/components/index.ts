@@ -1,3 +1,4 @@
+import './style/index.scss';
 // export { default as Affix } from './affix/affix';
 // export { default as Alert } from './alert/alert';
 // export { default as Badge } from './badge/badge';

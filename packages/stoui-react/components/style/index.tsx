@@ -1,1 +1,1 @@
-import './index.scss';
+export { default as styles } from './themes/default';

@@ -1,4 +1,24 @@
 export default {
+  // Button
+  button: {
+    rounded: 'rounded-full',
+    block: 'flex justify-center w-full',
+    default: 'text-white focus:outline-none shadow font-medium transition ease-in duration-200',
+    disabled: 'opacity-60 cursor-not-allowed',
+    size: {
+      small: 'px-6 py-1 text-sm',
+      medium: 'px-6 py-2',
+      large: 'px-6 py-3 text-lg'
+    },
+    primary: 'bg-blue-700',
+    success: 'bg-green-700',
+    danger: 'bg-red-600',
+    warning: 'bg-yellow-500',
+    indigo: 'bg-indigo-900',
+    dark: 'bg-black',
+    link: '',
+    text: ''
+  },
   // Alert
   alert: {
     base: 'p-4 pl-12 relative rounded-lg leading-5',
