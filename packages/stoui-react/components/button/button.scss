@@ -1,46 +1,62 @@
 .button {
-  border: none;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 3em;
-  cursor: pointer;
-  line-height: 1;
-  font-weight: 450;
-  /* Blue */
-  &-primary {
-    color: white;
-    background-color: #1ea7fd;
+  /* common */
+  &.rounded {
+    @apply rounded-full
   }
 
-  /* Gray */
-  &-secondary {
-    background-color: #e7e7e7;
-    color: black;
+  &.block {
+    @apply flex justify-center w-full
   }
 
-  /* Green */
-  &-success {
-    color: white;
-    background-color: #4caf50;
+  &.default {
+    @apply text-white focus:outline-none shadow font-medium transition ease-in duration-200
   }
 
-  /* Red */
-  &-danger {
-    color: white;
-    background-color: #f44336;
+  &.disabled {
+    @apply opacity-60 cursor-not-allowed
   }
 
-  &-small {
-    font-size: 12px;
-    padding: 10px 16px;
+  /* size */
+  &.small {
+    @apply px-6 py-1 text-sm
   }
-  &-medium {
-    font-size: 14px;
-    padding: 11px 20px;
+
+  &.medium {
+    @apply px-6 py-2
   }
-  &-large {
-    font-size: 16px;
-    padding: 12px 24px;
+
+  &.large {
+    @apply px-6 py-3 text-lg
+  }
+
+  /* color */
+  &.primary {
+    @apply bg-blue-700
+  }
+
+  &.success {
+    @apply bg-green-700
+  }
+
+  &.danger {
+    @apply bg-red-600
+  }
+
+  &.warning {
+    @apply bg-yellow-500
+  }
+
+  &.indigo {
+    @apply bg-indigo-900
+  }
+
+  &.dark {
+    @apply bg-black
+  }
+
+  &.link {
+  }
+
+  &.text {
   }
 }

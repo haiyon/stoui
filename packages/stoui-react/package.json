@@ -1,6 +1,6 @@
 {
   "name": "@stoui/react",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "React components that implement Stone UI",
   "scripts": {
     "storybook": "start-storybook -p 9600 -c .storybook",

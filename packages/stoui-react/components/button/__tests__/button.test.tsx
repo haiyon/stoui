@@ -9,7 +9,8 @@ describe('Test Button', () => {
 
   beforeEach(() => {
     props = {
-      type: 'primary'
+      children: 'Primary Button',
+      color: 'primary'
     };
   });
 
@@ -22,6 +23,6 @@ describe('Test Button', () => {
   it('should render correctly', () => {
     const { getByTestId } = renderComponent();
     const component = getByTestId('button');
-    expect(component).toHaveClass('button');
+    expect(component).toHaveTextContent('Primary Button');
   });
 });
