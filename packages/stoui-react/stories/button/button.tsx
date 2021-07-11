@@ -1,7 +1,7 @@
+import { action } from '@storybook/addon-actions';
 import React from 'react';
 
 import Button from '@/components/button/button';
-import { action } from '@storybook/addon-actions';
 
 export default {
   title: 'Base/Button',
@@ -15,4 +15,8 @@ export default {
   }
 };
 
-export const Primary = () => <Button color="primary" onClick={action('clicked')} type='submit'>Button</Button>;
+export const Primary = () => (
+  <Button color="primary" onClick={action('clicked')} type="submit">
+    Button
+  </Button>
+);

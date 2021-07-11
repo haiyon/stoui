@@ -1,4 +1,4 @@
-# Animation used by Stone UI Components for the web 
+# Animation used by Stone UI Components for the web
 
 ## Start
 

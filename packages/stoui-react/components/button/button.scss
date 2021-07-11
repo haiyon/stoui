@@ -1,57 +1,57 @@
 .button {
   /* common */
   &.rounded {
-    @apply rounded-full
+    @apply rounded-full;
   }
 
   &.block {
-    @apply flex justify-center w-full
+    @apply flex justify-center w-full;
   }
 
   &.default {
-    @apply text-white focus:outline-none shadow font-medium transition ease-in duration-200
+    @apply text-white focus:outline-none shadow font-medium transition ease-in duration-200;
   }
 
   &.disabled {
-    @apply opacity-60 cursor-not-allowed
+    @apply opacity-60 cursor-not-allowed;
   }
 
   /* size */
   &.small {
-    @apply px-6 py-1 text-sm
+    @apply px-6 py-1 text-sm;
   }
 
   &.medium {
-    @apply px-6 py-2
+    @apply px-6 py-2;
   }
 
   &.large {
-    @apply px-6 py-3 text-lg
+    @apply px-6 py-3 text-lg;
   }
 
   /* color */
   &.primary {
-    @apply bg-blue-700
+    @apply bg-blue-700;
   }
 
   &.success {
-    @apply bg-green-700
+    @apply bg-green-700;
   }
 
   &.danger {
-    @apply bg-red-600
+    @apply bg-red-600;
   }
 
   &.warning {
-    @apply bg-yellow-500
+    @apply bg-yellow-500;
   }
 
   &.indigo {
-    @apply bg-indigo-900
+    @apply bg-indigo-900;
   }
 
   &.dark {
-    @apply bg-black
+    @apply bg-black;
   }
 
   &.link {
