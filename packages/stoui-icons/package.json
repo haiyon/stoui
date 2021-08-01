@@ -1,0 +1,18 @@
+{
+  "name": "@stoui/icons",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Icons for the Stone UI",
+  "scripts": {},
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haiyon/stoui.git",
+    "directory": "packages/stoui-icons"
+  },
+  "bugs": {
+    "url": "https://github.com/haiyon/stoui/issues"
+  },
+  "author": "Shen <hi@haiyon.com>",
+  "license": "MIT"
+}

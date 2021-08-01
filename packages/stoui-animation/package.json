@@ -26,17 +26,14 @@
     "frontend",
     "web"
   ],
-  "author": {
-    "name": "Shen",
-    "url": "https://haiyon.com",
-    "email": "hi@haiyon.com"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haiyon/stoui.git",
+    "directory": "packages/stoui-animation"
   },
-  "maintainers": [
-    {
-      "name": "Shen",
-      "url": "https://haiyon.com",
-      "email": "hi@haiyon.com"
-    }
-  ],
+  "bugs": {
+    "url": "https://github.com/haiyon/stoui/issues"
+  },
+  "author": "Shen <hi@haiyon.com>",
   "license": "MIT"
 }
