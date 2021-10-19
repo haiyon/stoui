@@ -1,4 +1,4 @@
-# Base that implement Stone UI
+# Icons for the Stone UI
 
 ## Start
 

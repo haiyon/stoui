@@ -5,11 +5,14 @@ import React from 'react';
 
 import { ButtonProps, ButtonRef } from './button.types';
 
+const defaultProps: Partial<ButtonProps> = {
+  disabled: false,
+  rounded: true,
+  size: 'medium'
+};
+
 const Button = React.forwardRef(
-  (
-    { children, className, disabled = false, color, rounded = true, size = 'medium', submit, ...rest }: ButtonProps,
-    ref: ButtonRef
-  ) => (
+  ({ children, className, disabled, color, rounded, size, submit, ...rest }: ButtonProps, ref: ButtonRef) => (
     <button
       data-testid="button"
       ref={ref}
@@ -24,7 +27,8 @@ const Button = React.forwardRef(
         rounded ? 'rounded' : '',
         size,
         color
-      )}>
+      )}
+    >
       {children}
     </button>
   )
