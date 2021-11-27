@@ -1,3 +1,5 @@
 export interface LoadingProps {
-  foo: string;
+  className?: string;
+  children?: React.ReactNode;
+  active: boolean;
 }

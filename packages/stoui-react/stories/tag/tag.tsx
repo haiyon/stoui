@@ -3,7 +3,7 @@ import React from 'react';
 import Tag from '@/components/tag/tag';
 
 export default {
-  title: 'View/Tag',
+  title: 'Display/Tag',
   component: Tag
 };
 

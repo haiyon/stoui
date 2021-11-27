@@ -9,7 +9,10 @@ enum AlertEnum {
 */
 
 export interface AlertProps extends React.HtmlHTMLAttributes<HTMLDivElement> {
-  foo: string;
-  type?: 'success' | 'danger' | 'warning' | 'info' | 'neutral'; // keyof typeof AlertEnum
-  onClose?: () => void;
+  type?: 'success' | 'danger' | 'warning' | 'info';
+  className?: string;
+  title: string;
+  withIcon?: boolean;
+  closable?: boolean;
+  children?: React.ReactNode;
 }

@@ -11,5 +11,11 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   color?: ButtonColor;
   rounded?: boolean;
   size?: ButtonSize;
+  ref?: any;
   submit?: boolean;
+}
+
+export interface RefHandle {
+  container: () => HTMLElement | null;
+  button: () => HTMLButtonElement | null;
 }

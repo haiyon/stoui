@@ -3,7 +3,7 @@ import React from 'react';
 import Modal from '@/components/modal/modal';
 
 export default {
-  title: 'View/Modal',
+  title: 'Display/Modal',
   component: Modal
 };
 

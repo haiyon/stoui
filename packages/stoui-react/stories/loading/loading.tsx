@@ -3,10 +3,16 @@ import React from 'react';
 import Loading from '@/components/loading/loading';
 
 export default {
-  title: 'Navigation/Loading',
+  title: 'Display/Loading',
   component: Loading
 };
 
-export const WithBar = () => <Loading foo="bar" />;
+export const Default = (args: any) => (
+  <Loading {...args}>
+    <span>this loading content</span>
+  </Loading>
+);
 
-export const WithBaz = () => <Loading foo="baz" />;
+Default.args = {
+  active: true
+};

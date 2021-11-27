@@ -3,7 +3,7 @@ import React from 'react';
 import Collapse from '@/components/collapse/collapse';
 
 export default {
-  title: 'View/Collapse',
+  title: 'Display/Collapse',
   component: Collapse
 };
 

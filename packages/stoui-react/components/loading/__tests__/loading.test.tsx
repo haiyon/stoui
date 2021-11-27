@@ -9,16 +9,16 @@ describe('Test Loading', () => {
 
   beforeEach(() => {
     props = {
-      foo: 'bar'
+      active: true
     };
   });
 
   const renderComponent = () => render(<Loading {...props} />);
 
-  it('should render foo text correctly', () => {
-    props.foo = 'harvey was here';
+  it('class should include active', () => {
+    props.active = true;
     const { getByTestId } = renderComponent();
     const component = getByTestId('loading');
-    expect(component).toHaveTextContent('harvey was here');
+    expect(component.className).toMatch('active');
   });
 });
