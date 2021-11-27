@@ -3,7 +3,7 @@ import React from 'react';
 import Message from '@/components/message/message';
 
 export default {
-  title: 'View/Message',
+  title: 'Display/Message',
   component: Message
 };
 

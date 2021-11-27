@@ -3,7 +3,7 @@ import React from 'react';
 import Progress from '@/components/progress/progress';
 
 export default {
-  title: 'View/Progress',
+  title: 'Display/Progress',
   component: Progress
 };
 

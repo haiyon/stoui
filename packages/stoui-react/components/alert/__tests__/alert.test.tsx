@@ -8,15 +8,12 @@ describe('Test Alert', () => {
   let props: AlertProps;
 
   beforeEach(() => {
-    props = {
-      foo: 'bar'
-    };
+    // props = {};
   });
 
   const renderComponent = () => render(<Alert {...props} />);
 
   it('should render foo text correctly', () => {
-    props.foo = 'harvey was here';
     const { getByTestId } = renderComponent();
     const component = getByTestId('alert');
     expect(component).toHaveTextContent('harvey was here');

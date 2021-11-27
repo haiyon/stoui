@@ -3,7 +3,7 @@ import React from 'react';
 import Popcanfirm from '@/components/popcanfirm/popcanfirm';
 
 export default {
-  title: 'View/Popcanfirm',
+  title: 'Display/Popcanfirm',
   component: Popcanfirm
 };
 

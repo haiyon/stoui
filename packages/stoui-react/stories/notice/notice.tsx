@@ -3,7 +3,7 @@ import React from 'react';
 import Notice from '@/components/notice/notice';
 
 export default {
-  title: 'View/Notice',
+  title: 'Display/Notice',
   component: Notice
 };
 
