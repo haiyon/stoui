@@ -7,7 +7,7 @@
   },
   "include": [
     "components/button/**/*",
-    "components/style/**/*",
+    "components/introduction/**/*",
     "utils/**/*"
   ],
   "exclude": [
