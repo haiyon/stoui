@@ -3,7 +3,7 @@ const { firstUpperCase } = require('../helper');
 module.exports = componentName => ({
   type: 'stories',
   content: `import React from 'react';
-import ${firstUpperCase(componentName)} from '@stoui/${componentName}/${componentName}';
+import ${firstUpperCase(componentName)} from '@/components/${componentName}/${componentName}';
 
 export default {
   title: '${firstUpperCase(componentName)}',
