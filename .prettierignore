@@ -1,12 +1,15 @@
-/dist/*
 .local
 .output.js
-/node_modules/**
+node_modules
 
 dist
+
+lib
+es
+storybook-static
+
 
 .env*
 
 **/*.svg
 **/*.sh
-

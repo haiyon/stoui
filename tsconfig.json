@@ -2,8 +2,7 @@
   "extends": "./tsconfig.base.json",
   "exclude": ["node_modules"],
   "references": [
-    { "path": "packages/stoui"},
-    { "path": "packages/stoui-react" },
-    { "path": "packages/stoui-vue" }
+    { "path": "packages/react"},
+    { "path": "packages/vue"}
   ]
 }
