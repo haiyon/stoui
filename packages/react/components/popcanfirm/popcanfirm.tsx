@@ -1,4 +1,4 @@
-import './popcanfirm.scss';
+import './popcanfirm.css';
 
 import React from 'react';
 

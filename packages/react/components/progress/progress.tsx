@@ -1,4 +1,4 @@
-import './progress.scss';
+import './progress.css';
 
 import React from 'react';
 

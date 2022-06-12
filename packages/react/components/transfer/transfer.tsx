@@ -1,4 +1,4 @@
-import './transfer.scss';
+import './transfer.css';
 
 import React from 'react';
 

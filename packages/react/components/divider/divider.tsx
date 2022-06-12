@@ -1,4 +1,4 @@
-import './divider.scss';
+import './divider.css';
 
 import React from 'react';
 

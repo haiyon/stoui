@@ -1,4 +1,4 @@
-import './slider.scss';
+import './slider.css';
 
 import React from 'react';
 

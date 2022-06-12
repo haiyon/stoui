@@ -19,6 +19,6 @@ describe('Test Checkbox', () => {
     props.foo = 'harvey was here';
     const { getByTestId } = renderComponent();
     const component = getByTestId('checkbox');
-    expect(component).toHaveTextContent('harvey was here');
+    expect(component.textContent).toBe('harvey was here');
   });
 });

@@ -19,6 +19,6 @@ describe('Test Tag', () => {
     props.foo = 'harvey was here';
     const { getByTestId } = renderComponent();
     const component = getByTestId('tag');
-    expect(component).toHaveTextContent('harvey was here');
+    expect(component.textContent).toBe('harvey was here');
   });
 });

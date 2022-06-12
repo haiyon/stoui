@@ -2,6 +2,6 @@ const Component = require('./component');
 const Test = require('./test');
 const Stories = require('./stories');
 const Types = require('./types');
-const Scss = require('./scss');
+const Css = require('./css');
 
-module.exports = [Component, Scss, Stories, Types, Test];
+module.exports = [Component, Css, Stories, Types, Test];

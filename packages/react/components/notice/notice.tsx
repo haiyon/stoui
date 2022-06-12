@@ -1,4 +1,4 @@
-import './notice.scss';
+import './notice.css';
 
 import React from 'react';
 

@@ -18,7 +18,7 @@ describe('Test Input', () => {
   it('should render correctly', () => {
     props.size = 'medium';
     const { getByTestId } = renderComponent();
-    const component = getByTestId('input');
-    expect(component).toHaveClass('input');
+    const component = getByTestId('input').getAttribute('class');
+    expect(component).toMatch('input');
   });
 });

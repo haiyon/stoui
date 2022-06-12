@@ -2,6 +2,7 @@ module.exports = {
   roots: ['components', 'stories'],
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['./jest.setup.ts'],
+  testPathIgnorePatterns: ['dist', 'node_modules'],
   transform: {
     '^.+\\.(ts|tsx)?$': 'ts-jest'
   },

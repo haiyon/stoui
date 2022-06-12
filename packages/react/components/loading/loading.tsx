@@ -1,4 +1,4 @@
-import './loading.scss';
+import './loading.css';
 
 import clsx from 'clsx';
 import React from 'react';

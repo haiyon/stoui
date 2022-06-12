@@ -23,6 +23,6 @@ describe('Test Button', () => {
   it('should render correctly', () => {
     const { getByTestId } = renderComponent();
     const component = getByTestId('button');
-    expect(component).toHaveTextContent('Primary Button');
+    expect(component.textContent).toBe('Primary Button');
   });
 });

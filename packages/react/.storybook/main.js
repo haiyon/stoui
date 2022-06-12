@@ -2,6 +2,10 @@ const path = require('path');
 
 const stories = ['../stories/**/*.@(tsx|mdx|jsx)'];
 
+const core = {
+  builder: 'webpack5'
+};
+
 // Add any Storybook addons you want here: https://storybook.js.org/addons/
 const addons = [
   '@storybook/addon-a11y',
@@ -21,14 +25,25 @@ const webpackFinal = async config => {
   config.resolve.alias = {
     ...config.resolve.alias,
     '@/components': path.resolve(__dirname, '../components'),
-    '@/utils': path.resolve(__dirname, '../utils')
+    '@/utils': path.resolve(__dirname, '../utils'),
+    '@/theme': path.resolve(__dirname, '../theme')
   };
 
-  config.module.rules.push({
-    test: /\.(css|sass|scss|less)$/,
-    use: ['style-loader', 'css-loader', 'sass-loader', 'postcss-loader'],
-    include: path.resolve(__dirname, '../')
-  });
+  // config.module.rules.push({
+  //   test: /\.(css)$/,
+  //   use: [{
+  //     loader: 'postcss-loader',
+  //     options: {
+  //       postcssOptions: {
+  //         plugins: [
+  //           require('tailwindcss'),
+  //           require('autoprefixer')
+  //         ]
+  //       }
+  //     }
+  //   }],
+  //   include: path.resolve(__dirname, '../')
+  // });
 
   config.module.rules.push({
     test: /\.(ts|tsx)$/,
@@ -44,6 +59,7 @@ const webpackFinal = async config => {
 
 module.exports = {
   stories,
+  core,
   addons,
   webpackFinal
 };

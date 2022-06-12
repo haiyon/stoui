@@ -1,4 +1,4 @@
-import './input.scss';
+import './input.css';
 
 import React from 'react';
 

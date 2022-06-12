@@ -1,4 +1,4 @@
-import './steps.scss';
+import './steps.css';
 
 import React from 'react';
 

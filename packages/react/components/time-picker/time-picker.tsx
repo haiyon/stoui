@@ -1,4 +1,4 @@
-import './time-picker.scss';
+import './time-picker.css';
 
 import React from 'react';
 

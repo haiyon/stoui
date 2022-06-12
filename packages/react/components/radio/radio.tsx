@@ -1,4 +1,4 @@
-import './radio.scss';
+import './radio.css';
 
 import React from 'react';
 

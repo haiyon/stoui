@@ -14,7 +14,7 @@ const banner = `
   /**
    * @license
    * author: ${pkg.author.name}
-   * Released under the ${pkg.license} license.
+   * released under the ${pkg.license} license.
    */
 `;
 
@@ -56,8 +56,8 @@ export default (async () => ({
     postcss({
       // extensions: ['.css', '.scss', '.sass'],
       extract: true,
-      minimize: isProd
-      // modules: true
+      minimize: isProd,
+      modules: false
     }),
     (await import('rollup-plugin-terser')).terser()
   ]

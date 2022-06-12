@@ -1,4 +1,4 @@
-import './date-picker.scss';
+import './date-picker.css';
 
 import React from 'react';
 

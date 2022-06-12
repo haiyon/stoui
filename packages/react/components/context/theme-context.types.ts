@@ -1,9 +1,11 @@
 import React from 'react';
 
-export interface ThemeContextInterface {
+export type Mode = string | undefined | 'light' | 'dark';
+
+export interface ThemeContextProps {
   theme: any;
-  // mode?: Mode;
-  toggleMode?: boolean;
+  mode?: Mode;
+  toggleMode?: () => void | boolean | null;
 }
 
 export interface ThemeProviderProps {

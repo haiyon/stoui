@@ -1,4 +1,4 @@
-import './badge.scss';
+import './badge.css';
 
 import React from 'react';
 

@@ -1,4 +1,4 @@
-import './timeline.scss';
+import './timeline.css';
 
 import React from 'react';
 

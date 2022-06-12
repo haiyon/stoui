@@ -1,4 +1,4 @@
-import './checkbox.scss';
+import './checkbox.css';
 
 import React from 'react';
 

@@ -1,4 +1,4 @@
-import './breadcrumb.scss';
+import './breadcrumb.css';
 
 import React from 'react';
 

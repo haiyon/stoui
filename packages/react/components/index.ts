@@ -1,6 +1,6 @@
 // BASE
 
-import './introduction/index.scss';
+import './introduction/index.css';
 // export { default as Icon } from './icon/icon';
 // export { default as Layout } from './layout/layout';
 // export { default as Space } from './loading/space';

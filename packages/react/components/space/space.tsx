@@ -1,4 +1,4 @@
-import './space.scss';
+import './space.css';
 
 import React from 'react';
 

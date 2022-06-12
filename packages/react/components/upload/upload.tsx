@@ -1,4 +1,4 @@
-import './upload.scss';
+import './upload.css';
 
 import React from 'react';
 

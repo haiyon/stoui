@@ -19,6 +19,6 @@ describe('Test Affix', () => {
     props.foo = 'harvey was here';
     const { getByTestId } = renderComponent();
     const component = getByTestId('affix');
-    expect(component).toHaveTextContent('harvey was here');
+    expect(component.textContent).toBe('harvey was here');
   });
 });

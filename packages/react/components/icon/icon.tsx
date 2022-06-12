@@ -1,4 +1,4 @@
-import './icon.scss';
+import './icon.css';
 
 import React from 'react';
 

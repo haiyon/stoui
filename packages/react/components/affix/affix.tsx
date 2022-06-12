@@ -1,4 +1,4 @@
-import './affix.scss';
+import './affix.css';
 
 import React from 'react';
 

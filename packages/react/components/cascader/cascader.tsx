@@ -1,4 +1,4 @@
-import './cascader.scss';
+import './cascader.css';
 
 import React from 'react';
 

@@ -1,0 +1,70 @@
+.button-containter {
+  @apply inline-flex font-medium;
+}
+.button {
+  /* common */
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+.button.default {
+  @apply text-white relative cursor-pointer inline-flex items-center space-x-2 text-center border border-solid border-transparent transition ease-out duration-200 outline-none;
+}
+
+.button.rounded {
+  @apply rounded-full;
+}
+
+.button.block {
+  @apply flex justify-center w-full;
+}
+
+.button.disabled {
+  @apply opacity-75 cursor-not-allowed;
+}
+
+/* size */
+.button.small {
+  @apply px-6 py-1 text-sm;
+}
+
+.button.medium {
+  @apply px-6 py-2;
+}
+
+.button.large {
+  @apply px-6 py-3 text-lg;
+}
+
+/* color */
+.button.primary {
+  @apply bg-blue-700;
+}
+
+.button.success {
+  @apply bg-green-700;
+}
+
+.button.danger {
+  @apply bg-red-600;
+}
+
+.button.warning {
+  @apply bg-yellow-500;
+}
+
+.button.indigo {
+  @apply bg-indigo-900;
+}
+
+.button.dark {
+  @apply bg-black;
+}
+
+.button.link {
+  @apply text-blue-500 bg-transparent;
+}
+
+.button.text {
+  @apply bg-transparent text-gray-500;
+}

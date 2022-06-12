@@ -1,4 +1,4 @@
-import './message.scss';
+import './message.css';
 
 import React from 'react';
 

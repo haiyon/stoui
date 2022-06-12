@@ -7,20 +7,14 @@
     "declarationDir": "dist",
     "composite": true,
     "target": "es2018",
-    "lib": [
-      "dom",
-      "es2017",
-      "esnext"
-    ],
+    "lib": ["dom", "es2017", "esnext"],
     "jsx": "react",
     "baseUrl": ".",
+    "types": ["@testing-library/jest-dom", "node", "jest"],
     "paths": {
-      "@/components/*": [
-        "components/*"
-      ],
-      "@/utils/*": [
-        "utils/*"
-      ]
+      "@/components/*": ["components/*"],
+      "@/utils/*": ["utils/*"],
+      "@/theme/*": ["theme/*"]
     }
   },
   "include": [
@@ -30,10 +24,8 @@
     "jest.setup.ts",
     "components/**/*",
     "stories/**/*",
-    "utils/**/*"
+    "utils/**/*",
+    "theme/**/*"
   ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
+  "exclude": ["node_modules", "dist"]
 }

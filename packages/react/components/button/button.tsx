@@ -1,4 +1,4 @@
-import './button.scss';
+import './button.css';
 
 import clsx from 'clsx';
 import React, { useImperativeHandle, useRef } from 'react';
