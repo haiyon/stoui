@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "sourceMap": false,
+    "target": "es5"
+  },
+  "include": [
+    "components/**/*",
+    "utils/**/*",
+    "themes/**/*",
+    "types/**/*"
+  ],
+  "exclude": [
+    "utils/generate/**/*",
+    "components/**/__tests__/*"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "@stoui/utils",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Utils for the Stone UI",
+  "scripts": {
+    "type-check": "tsc -p tsconfig.json --pretty --noEmit",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "format": "pnpm run lint --fix && pnpm run prettier --write",
+    "prettier": "prettier \"**/*.{js,jsx,ts,tsx,md,css,scss,yaml,yml}\""
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haiyon/stoui.git",
+    "directory": "packages/stoui-utils"
+  },
+  "bugs": {
+    "url": "https://github.com/haiyon/stoui/issues"
+  },
+  "author": "Shen <hi@haiyon.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.54.1",
+    "eslint": "^8.0.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "typescript": "*"
+  }
+}

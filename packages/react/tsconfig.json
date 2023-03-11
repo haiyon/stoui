@@ -1,0 +1,26 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "declarationDir": "dist",
+    "composite": true,
+    "target": "es2018",
+    "lib": ["dom", "es2017", "esnext"],
+    "jsx": "react",
+    "baseUrl": ".",
+    "types": ["@testing-library/jest-dom", "node", "jest"],
+    "paths": {
+      "@/components/*": ["components/*"],
+      "@/themes/*": ["themes/*"],
+      "@/types/*": ["types/*"],
+      "@/utils/*": ["utils/*"]
+    }
+  },
+  "include": ["**/*"],
+  "exclude": [
+    "*.js",
+    "**/generate/**/*.js"
+  ]
+}
