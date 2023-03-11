@@ -5,14 +5,14 @@
 ### Installation
 
 ```bash
-yarn install
+pnpm install
 ```
 
 ### Running the app
 
 ```bash
 # development
-yarn dev:react
+pnpm dev:react
 ```
 
 ### Requirements

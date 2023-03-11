@@ -9,14 +9,14 @@ describe('Test Alert', () => {
 
   beforeEach(() => {
     props = {
-      title: 'alert testing'
+      foo: 'bar'
     };
   });
 
   const renderComponent = () => render(<Alert {...props} />);
 
   it('should render foo text correctly', () => {
-    props.children = 'harvey was here';
+    props.foo = 'harvey was here';
     const { getByTestId } = renderComponent();
     const component = getByTestId('alert');
     expect(component.textContent).toBe('harvey was here');

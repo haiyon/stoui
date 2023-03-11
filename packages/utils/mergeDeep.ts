@@ -5,9 +5,9 @@
  * @param item The value to check.
  * @returns `true` if the value is an object, `false` otherwise.
  */
-export function isObject(item: unknown) {
+export const isObject = (item: unknown) => {
   return item && typeof item === 'object' && !Array.isArray(item);
-}
+};
 
 /**
  * Performs a deep merge of one or more source objects into a target object.
@@ -21,12 +21,12 @@ export function isObject(item: unknown) {
  * const merged = mergeDeep(obj1, obj2);
  * console.log(merged); // Output: { a: 1, b: { c: 2, d: 3 } }
  */
-export function mergeDeep(
+export const mergeDeep = (
   target: Record<string, unknown>,
-  ...sources: Record<string, unknown>[]
-): Record<string, unknown> {
+  ...sources: Array<Record<string, unknown>>
+): Record<string, unknown> => {
   // If there are no more source objects to merge, return the original target object.
-  if (!sources.length) return target;
+  if (sources.length === 0) return target;
 
   // Remove the first source object from the array and merge it into the target object.
   const source = sources.shift();
@@ -45,4 +45,4 @@ export function mergeDeep(
 
   // Recursively call mergeDeep with the updated target object and remaining source objects.
   return mergeDeep(target, ...sources);
-}
+};

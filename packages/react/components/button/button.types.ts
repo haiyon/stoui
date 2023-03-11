@@ -1,3 +1,5 @@
+import React from 'react';
+
 export type ButtonColor = 'primary' | 'success' | 'danger' | 'warning' | 'indigo' | 'dark' | 'link' | 'text';
 export type ButtonSize = 'small' | 'medium' | 'large';
 export type ButtonRef = React.ForwardedRef<HTMLButtonElement>;

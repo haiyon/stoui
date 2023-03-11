@@ -2,12 +2,17 @@
   "name": "stoui-monorepo",
   "private": true,
   "description": "Stone UI",
+  "engines": {
+    "npm": "please-use-pnpm",
+    "yarn": "please-use-pnpm"
+  },
   "workspaces": [
     "packages/*",
     "example/*"
   ],
   "scripts": {
     "update-deps": "pnpm update -i -r --latest",
+    "preinstall": "npx only-allow pnpm",
     "prepare": "husky install",
     "clean:all": "rimraf ./**/{*error.log,dist,node_modules}",
     "dev:react": "pnpm --filter @stoui/react storybook",
@@ -24,16 +29,16 @@
     "tsc": "tsc --build"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.0.2",
-    "@commitlint/config-conventional": "^17.0.2",
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
     "cross-env": "^7.0.3",
-    "husky": "^8.0.1",
-    "lerna": "^5.1.1",
-    "lint-staged": "^13.0.1",
+    "husky": "^8.0.3",
+    "lerna": "^6.5.1",
+    "lint-staged": "^13.2.0",
     "monorepo-run": "^0.4.2",
-    "prettier": "^2.6.2",
-    "rimraf": "^3.0.2",
-    "typescript": "^4.7.3"
+    "prettier": "^2.8.4",
+    "rimraf": "^4.4.0",
+    "typescript": "^4.9.5"
   },
   "repository": {
     "type": "git",
@@ -48,15 +53,10 @@
       "@commitlint/config-conventional"
     ]
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
-      "npm run format"
+      "npm run format",
+      "git add"
     ]
   },
   "config": {

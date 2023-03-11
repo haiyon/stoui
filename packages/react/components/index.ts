@@ -1,6 +1,6 @@
 // BASE
 
-import './introduction/index.css';
+// import './introduction/index.css';
 // export { default as Icon } from './icon/icon';
 // export { default as Layout } from './layout/layout';
 // export { default as Space } from './loading/space';
@@ -34,7 +34,7 @@ export { default as Button } from './button/button';
 
 // export { default as Divider } from './loading/divider';
 // export { default as Loading } from './loading/loading';
-// export { default as Alert } from './alert/alert';
+export { default as Alert } from './alert/alert';
 // export { default as Badge } from './badge/badge';
 // export { default as Card } from './card/card';
 // export { default as Tag } from './tag/tag';

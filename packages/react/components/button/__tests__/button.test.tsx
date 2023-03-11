@@ -1,28 +1,35 @@
-import { render } from '@testing-library/react';
+import { fireEvent, render } from '@testing-library/react';
 import React from 'react';
 
 import Button from '../button';
-import { ButtonProps } from '../button.types';
 
-describe('Test Button', () => {
-  let props: ButtonProps;
-
-  beforeEach(() => {
-    props = {
-      children: 'Primary Button',
-      color: 'primary'
-    };
+describe('Button', () => {
+  it('renders a button with default props', () => {
+    const { getByTestId } = render(<Button />);
+    const button = getByTestId('button');
+    expect(button).toBeInTheDocument();
+    expect(button.tagName).toBe('BUTTON');
+    expect(button).toHaveClass('button');
+    expect(button).toHaveClass('default');
+    expect(button).toHaveClass('rounded');
+    expect(button).toHaveClass('primary');
+    expect(button).not.toBeDisabled();
   });
 
-  const renderComponent = () => render(<Button {...props} />);
-
-  it('should be defined', () => {
-    expect(Button).toBeDefined();
-  });
-
-  it('should render correctly', () => {
-    const { getByTestId } = renderComponent();
-    const component = getByTestId('button');
-    expect(component.textContent).toBe('Primary Button');
+  it('renders a button with custom props', () => {
+    const { getByTestId } = render(
+      <Button color="success" disabled rounded={false} size="large">
+        Click me!
+      </Button>
+    );
+    const button = getByTestId('button');
+    expect(button).toBeInTheDocument();
+    expect(button).toHaveClass('button');
+    expect(button).toHaveClass('success');
+    expect(button).toHaveClass('large');
+    expect(button).not.toHaveClass('rounded');
+    expect(button).toBeDisabled();
+    fireEvent.click(button);
+    expect(button).toBeDisabled();
   });
 });

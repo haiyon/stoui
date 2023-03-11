@@ -1,6 +1,7 @@
 import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
 import nodeResolve from '@rollup/plugin-node-resolve';
+import terser from '@rollup/plugin-terser';
 import nodeGlobals from 'rollup-plugin-node-globals';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
@@ -49,7 +50,6 @@ export default (async () => ({
     commonjs(),
     typescript({
       useTsconfigDeclarationDir: true,
-      rollupCommonJSResolveHack: true,
       tsconfig: 'tsconfig.build.json',
       clean: true
     }),
@@ -59,6 +59,6 @@ export default (async () => ({
       minimize: isProd,
       modules: false
     }),
-    (await import('rollup-plugin-terser')).terser()
+    await terser()
   ]
 }))();

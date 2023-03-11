@@ -1,4 +1,3 @@
-/* eslint-disable */
 const { firstUpperCase } = require('../helper');
 module.exports = componentName => ({
   type: 'component',

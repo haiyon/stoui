@@ -1,6 +1,9 @@
 const path = require('path');
+const postcss = require('postcss');
 
 const stories = ['../stories/**/*.@(tsx|mdx|jsx)'];
+
+const framework = '@storybook/react';
 
 const core = {
   builder: 'webpack5'
@@ -15,7 +18,15 @@ const addons = [
   {
     name: '@storybook/addon-postcss',
     options: {
-      postcssLoaderOptions: { implementation: require('postcss') }
+      cssLoaderOptions: {
+        // When you have splitted your css over multiple files
+        // and use @import('./other-styles.css')
+        importLoaders: 1
+      },
+      postcssLoaderOptions: {
+        // When using postCSS 8
+        implementation: postcss
+      }
     }
   }
 ];
@@ -24,27 +35,11 @@ const addons = [
 const webpackFinal = async config => {
   config.resolve.alias = {
     ...config.resolve.alias,
+    '@/types': path.resolve(__dirname, '../types'),
     '@/components': path.resolve(__dirname, '../components'),
-    '@/utils': path.resolve(__dirname, '../utils'),
-    '@/theme': path.resolve(__dirname, '../theme')
+    '@/themes': path.resolve(__dirname, '../themes'),
+    '@/utils': path.resolve(__dirname, '../utils')
   };
-
-  // config.module.rules.push({
-  //   test: /\.(css)$/,
-  //   use: [{
-  //     loader: 'postcss-loader',
-  //     options: {
-  //       postcssOptions: {
-  //         plugins: [
-  //           require('tailwindcss'),
-  //           require('autoprefixer')
-  //         ]
-  //       }
-  //     }
-  //   }],
-  //   include: path.resolve(__dirname, '../')
-  // });
-
   config.module.rules.push({
     test: /\.(ts|tsx)$/,
     loader: require.resolve('babel-loader'),
@@ -53,13 +48,7 @@ const webpackFinal = async config => {
     }
   });
   config.resolve.extensions.push('.ts', '.tsx');
-
   return config;
 };
 
-module.exports = {
-  stories,
-  core,
-  addons,
-  webpackFinal
-};
+module.exports = { stories, framework, core, addons, webpackFinal };

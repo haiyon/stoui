@@ -2,13 +2,13 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "sourceMap": false,
-    "target": "es5",
-    "rootDir": "components"
+    "target": "es5"
   },
   "include": [
-    "components/button/**/*",
-    "components/introduction/**/*",
-    "utils/**/*"
+    "components/**/*",
+    "utils/**/*",
+    "themes/**/*",
+    "types/**/*"
   ],
   "exclude": [
     "utils/generate/**/*",

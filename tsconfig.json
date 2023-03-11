@@ -2,7 +2,10 @@
   "extends": "./tsconfig.base.json",
   "exclude": ["node_modules"],
   "references": [
+    { "path": "packages/animation"},
     { "path": "packages/react"},
+    { "path": "packages/icons"},
+    { "path": "packages/utils"},
     { "path": "packages/vue"}
   ]
 }

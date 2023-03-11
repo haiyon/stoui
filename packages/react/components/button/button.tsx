@@ -2,41 +2,38 @@ import './button.css';
 
 import clsx from 'clsx';
 import React, { useImperativeHandle, useRef } from 'react';
-import ReactMarkdown from 'react-markdown';
 
-import { ButtonProps, ButtonRef, RefHandle } from './button.types';
+import { ButtonColor, ButtonProps, ButtonSize, RefHandle } from './button.types';
 
-const defaultProps: Partial<ButtonProps> = {
-  color: 'primary',
+const defaultProps = {
+  color: 'primary' as ButtonColor,
   disabled: false,
   rounded: true,
-  size: 'medium'
+  size: 'medium' as ButtonSize
 };
 
 const Button = React.forwardRef<RefHandle, ButtonProps>(
-  ({ children, className, disabled, color, rounded, size, submit }: ButtonProps, ref) => {
-    // button ref
+  (
+    {
+      children,
+      className,
+      disabled = defaultProps.disabled,
+      color = defaultProps.color,
+      rounded = defaultProps.rounded,
+      size = defaultProps.size,
+      submit
+    }: ButtonProps,
+    ref
+  ) => {
     const containerRef = useRef<HTMLElement>(null);
     const buttonRef = useRef<HTMLButtonElement>(null);
 
     useImperativeHandle(ref, () => ({
-      container: () => {
-        return containerRef.current;
-      },
-      button: () => {
-        return buttonRef.current;
-      }
+      container: () => containerRef.current,
+      button: () => buttonRef.current
     }));
 
-    const cls = clsx(
-      className,
-      'button',
-      disabled ? 'disabled' : defaultProps.disabled,
-      'default',
-      rounded ? 'rounded' : defaultProps.rounded,
-      size ? size : defaultProps.size,
-      color ? color : defaultProps.color
-    );
+    const cls = clsx('button', disabled && 'disabled', 'default', rounded && 'rounded', size, color, className);
 
     const RenderedButton = ({ children }: any) => (
       <button
@@ -49,6 +46,7 @@ const Button = React.forwardRef<RefHandle, ButtonProps>(
         {children}
       </button>
     );
+
     return (
       <span ref={containerRef}>
         <RenderedButton>{children && <span>{children}</span>}</RenderedButton>

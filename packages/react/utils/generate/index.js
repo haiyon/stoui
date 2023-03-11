@@ -1,4 +1,3 @@
-/* eslint-disable */
 require('colors');
 const fs = require('fs');
 const templates = require('./templates');

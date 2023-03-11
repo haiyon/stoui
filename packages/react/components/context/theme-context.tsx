@@ -1,7 +1,7 @@
-import windowExists from '@stoui/utils/window-exists';
 import React, { useContext, useEffect, useState } from 'react';
 
-import defaultTheme from '@/theme/default';
+import defaultTheme from '@/themes/default';
+import { windowExists } from '@/utils/window-exists';
 
 import { Mode, ThemeContextProps, ThemeProviderProps } from './theme-context.types';
 

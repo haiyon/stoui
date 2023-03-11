@@ -1,9 +1,11 @@
 import React from 'react';
 
+import { StoTheme } from '@/types/theme';
+
 export type Mode = string | undefined | 'light' | 'dark';
 
 export interface ThemeContextProps {
-  theme: any;
+  theme: StoTheme;
   mode?: Mode;
   toggleMode?: () => void | boolean | null;
 }

@@ -3,6 +3,6 @@
   "compilerOptions": {
     "composite": true,
     "outDir": "dist",
-    "baseUrl": "."
+    "baseUrl": ".",
   }
 }
