@@ -1,72 +1,80 @@
-import React, { FunctionComponent, useContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 
 import defaultTheme from '@/themes/default';
 import { windowExists } from '@/utils/window-exists';
 
 import { Mode, ThemeContextProps, ThemeProviderProps } from './theme-context.types';
 
-export const ThemeContext = React.createContext<ThemeContextProps>({
+const LOCAL_STORAGE_KEY = 'theme';
+
+export const ThemeContext = createContext<ThemeContextProps>({
   theme: defaultTheme
 });
 
-export const ThemeProvider: FunctionComponent<ThemeProviderProps> = ({ children, value }) => {
+export const ThemeProvider = ({ children, value }: ThemeProviderProps) => {
   return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
 };
 
-export function useTheme(): ThemeContextProps {
+export const useTheme = (): ThemeContextProps => {
   return useContext(ThemeContext);
-}
+};
 
-export const useThemeMode = (
-  usePreferences: boolean
-): [Mode, React.Dispatch<React.SetStateAction<Mode>> | undefined, (() => void) | undefined] => {
-  if (!usePreferences) return [undefined, undefined, undefined];
-  const [mode, setMode] = useState<Mode>(undefined);
+export const useThemeMode = (usePreferences: boolean): [Mode, () => void] => {
+  const [mode, setMode] = useState<Mode>(() => {
+    if (usePreferences) {
+      const userPreference =
+        windowExists() && !!window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      return userPreference ? 'dark' : 'light';
+    } else {
+      return undefined;
+    }
+  });
 
-  const savePreference = (m: string) => localStorage.setItem('theme', m);
+  const savePreference = (m: Mode) => localStorage.setItem(LOCAL_STORAGE_KEY, m as string);
 
   const toggleMode = () => {
-    if (!mode) {
+    if (mode === 'auto') {
       return;
     }
 
+    const newMode = mode === 'dark' ? 'light' : 'dark';
+
     if (windowExists()) {
-      document.documentElement.classList.toggle('dark');
+      document.documentElement.classList.toggle('dark', newMode === 'dark');
     }
 
-    savePreference(mode);
-    setMode(mode == 'dark' ? 'light' : 'dark');
+    savePreference(newMode);
+    setMode(newMode);
   };
 
-  if (usePreferences) {
-    useEffect(() => {
-      const userPreference =
-        windowExists() && !!window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const userMode = localStorage.getItem('theme') || (userPreference ? 'dark' : 'light');
+  useEffect(() => {
+    if (usePreferences && mode === 'auto' && windowExists() && !!window.matchMedia) {
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      const listener = () => {
+        if (mediaQuery.matches) {
+          savePreference('dark');
+          setMode('dark');
+        } else {
+          savePreference('light');
+          setMode('light');
+        }
+      };
+      mediaQuery.addEventListener('change', listener);
+      return () => mediaQuery.removeEventListener('change', listener);
+    }
+  }, [usePreferences, mode, savePreference]);
 
-      if (userMode) {
-        setMode(userMode);
-      }
-    }, []);
-
-    useEffect(() => {
-      if (!mode) {
-        return;
-      }
-
+  useEffect(() => {
+    if (usePreferences && mode && mode !== 'auto') {
       savePreference(mode);
 
       if (!windowExists()) {
         return;
       }
 
-      if (mode != 'dark') {
-        document.documentElement.classList.remove('dark');
-      } else {
-        document.documentElement.classList.add('dark');
-      }
-    }, [mode]);
-  }
+      document.documentElement.classList.toggle('dark', mode === 'dark');
+    }
+  }, [usePreferences, mode]);
 
-  return [mode, setMode, toggleMode];
+  return [mode, toggleMode];
 };
