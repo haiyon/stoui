@@ -1,7 +1,9 @@
 /* eslint-disable */
-require('colors');
-const fs = require('fs');
-const templates = require('./templates');
+import 'colors';
+
+import fs from 'fs';
+
+import templates from './templates';
 
 const componentName = process.argv[2];
 
@@ -19,9 +21,7 @@ if (fs.existsSync(componentDirectory) || fs.existsSync(storiesDirectory)) {
   process.exit(1);
 }
 
-fs.mkdirSync(componentTestDirectory, {
-  recursive: true
-});
+fs.mkdirSync(componentTestDirectory, { recursive: true });
 fs.mkdirSync(storiesDirectory);
 
 const generatedTemplates = templates.map(template => template(componentName));
@@ -44,4 +44,4 @@ generatedTemplates.forEach(template => {
   }
 });
 
-console.log('Successfully created component under: ' + componentDirectory.green);
+console.log(`Successfully created component under: ${componentDirectory.green}`);
