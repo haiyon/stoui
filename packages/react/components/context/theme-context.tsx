@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { FunctionComponent, useContext, useEffect, useState } from 'react';
 
 import defaultTheme from '@/themes/default';
 import { windowExists } from '@/utils/window-exists';
@@ -9,7 +9,7 @@ export const ThemeContext = React.createContext<ThemeContextProps>({
   theme: defaultTheme
 });
 
-export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children, value }) => {
+export const ThemeProvider: FunctionComponent<ThemeProviderProps> = ({ children, value }) => {
   return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
 };
 

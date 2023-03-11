@@ -1,10 +1,10 @@
 import './breadcrumb.css';
 
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
 import { BreadcrumbProps } from './breadcrumb.types';
 
-const Breadcrumb: React.FC<BreadcrumbProps> = ({ foo }) => (
+const Breadcrumb: FunctionComponent<BreadcrumbProps> = ({ foo }) => (
   <div data-testid="breadcrumb" className="foo-bar">
     {foo}
   </div>

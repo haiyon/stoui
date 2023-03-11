@@ -1,10 +1,10 @@
 import './popcanfirm.css';
 
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
 import { PopcanfirmProps } from './popcanfirm.types';
 
-const Popcanfirm: React.FC<PopcanfirmProps> = ({ foo }) => (
+const Popcanfirm: FunctionComponent<PopcanfirmProps> = ({ foo }) => (
   <div data-testid="popcanfirm" className="foo-bar">
     {foo}
   </div>

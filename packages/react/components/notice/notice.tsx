@@ -1,10 +1,10 @@
 import './notice.css';
 
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
 import { NoticeProps } from './notice.types';
 
-const Notice: React.FC<NoticeProps> = ({ foo }) => (
+const Notice: FunctionComponent<NoticeProps> = ({ foo }) => (
   <div data-testid="notice" className="foo-bar">
     {foo}
   </div>

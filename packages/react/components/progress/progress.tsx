@@ -1,10 +1,10 @@
 import './progress.css';
 
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
 import { ProgressProps } from './progress.types';
 
-const Progress: React.FC<ProgressProps> = ({ foo }) => (
+const Progress: FunctionComponent<ProgressProps> = ({ foo }) => (
   <div data-testid="progress" className="foo-bar">
     {foo}
   </div>

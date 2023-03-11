@@ -1,10 +1,10 @@
 import './modal.css';
 
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
 import { ModalProps } from './modal.types';
 
-const Modal: React.FC<ModalProps> = ({ foo }) => (
+const Modal: FunctionComponent<ModalProps> = ({ foo }) => (
   <div data-testid="modal" className="foo-bar">
     {foo}
   </div>

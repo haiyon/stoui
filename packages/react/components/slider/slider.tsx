@@ -1,10 +1,10 @@
 import './slider.css';
 
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
 import { SliderProps } from './slider.types';
 
-const Slider: React.FC<SliderProps> = ({ foo }) => (
+const Slider: FunctionComponent<SliderProps> = ({ foo }) => (
   <div data-testid="slider" className="foo-bar">
     {foo}
   </div>

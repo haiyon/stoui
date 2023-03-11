@@ -1,10 +1,10 @@
 import './space.css';
 
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
 import { SpaceProps } from './space.types';
 
-const Space: React.FC<SpaceProps> = ({ foo }) => (
+const Space: FunctionComponent<SpaceProps> = ({ foo }) => (
   <div data-testid="space" className="foo-bar">
     {foo}
   </div>

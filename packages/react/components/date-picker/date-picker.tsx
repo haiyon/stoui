@@ -1,10 +1,10 @@
 import './date-picker.css';
 
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
 import { DatePickerProps } from './date-picker.types';
 
-const DatePicker: React.FC<DatePickerProps> = ({ foo }) => (
+const DatePicker: FunctionComponent<DatePickerProps> = ({ foo }) => (
   <div data-testid="date-picker" className="foo-bar">
     {foo}
   </div>

@@ -1,7 +1,7 @@
 import './button.css';
 
 import clsx from 'clsx';
-import React, { useImperativeHandle, useRef } from 'react';
+import React, { forwardRef, FunctionComponent, useImperativeHandle, useRef } from 'react';
 
 import { ButtonColor, ButtonProps, ButtonSize, RefHandle } from './button.types';
 
@@ -12,7 +12,7 @@ const defaultProps = {
   size: 'medium' as ButtonSize
 };
 
-const Button = React.forwardRef<RefHandle, ButtonProps>(
+const Button: FunctionComponent<ButtonProps> = forwardRef<RefHandle, ButtonProps>(
   (
     {
       children,

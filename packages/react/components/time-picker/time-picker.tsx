@@ -1,10 +1,10 @@
 import './time-picker.css';
 
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
 import { TimePickerProps } from './time-picker.types';
 
-const TimePicker: React.FC<TimePickerProps> = ({ foo }) => (
+const TimePicker: FunctionComponent<TimePickerProps> = ({ foo }) => (
   <div data-testid="time-picker" className="foo-bar">
     {foo}
   </div>

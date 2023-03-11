@@ -1,10 +1,10 @@
 import './tooltip.css';
 
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
 import { TooltipProps } from './tooltip.types';
 
-const Tooltip: React.FC<TooltipProps> = ({ foo }) => (
+const Tooltip: FunctionComponent<TooltipProps> = ({ foo }) => (
   <div data-testid="tooltip" className="foo-bar">
     {foo}
   </div>

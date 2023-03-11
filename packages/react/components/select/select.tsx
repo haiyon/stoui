@@ -1,10 +1,10 @@
 import './select.css';
 
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
 import { SelectProps } from './select.types';
 
-const Select: React.FC<SelectProps> = ({ foo }) => (
+const Select: FunctionComponent<SelectProps> = ({ foo }) => (
   <div data-testid="select" className="foo-bar">
     {foo}
   </div>

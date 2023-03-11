@@ -1,10 +1,10 @@
 import './upload.css';
 
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
 import { UploadProps } from './upload.types';
 
-const Upload: React.FC<UploadProps> = ({ foo }) => (
+const Upload: FunctionComponent<UploadProps> = ({ foo }) => (
   <div data-testid="upload" className="foo-bar">
     {foo}
   </div>

@@ -1,10 +1,10 @@
 import './tabs.css';
 
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
 import { TabsProps } from './tabs.types';
 
-const Tabs: React.FC<TabsProps> = ({ foo }) => (
+const Tabs: FunctionComponent<TabsProps> = ({ foo }) => (
   <div data-testid="tabs" className="foo-bar">
     {foo}
   </div>

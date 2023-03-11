@@ -1,10 +1,10 @@
 import './transfer.css';
 
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
 import { TransferProps } from './transfer.types';
 
-const Transfer: React.FC<TransferProps> = ({ foo }) => (
+const Transfer: FunctionComponent<TransferProps> = ({ foo }) => (
   <div data-testid="transfer" className="foo-bar">
     {foo}
   </div>

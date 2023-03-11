@@ -1,10 +1,10 @@
 import './affix.css';
 
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
 import { AffixProps } from './affix.types';
 
-const Affix: React.FC<AffixProps> = ({ foo }) => (
+const Affix: FunctionComponent<AffixProps> = ({ foo }) => (
   <div data-testid="affix" className="foo-bar">
     {foo}
   </div>

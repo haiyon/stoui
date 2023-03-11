@@ -1,10 +1,10 @@
 import './icon.css';
 
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
 import { IconProps } from './icon.types';
 
-const Icon: React.FC<IconProps> = ({ foo }) => (
+const Icon: FunctionComponent<IconProps> = ({ foo }) => (
   <div data-testid="icon" className="foo-bar">
     {foo}
   </div>

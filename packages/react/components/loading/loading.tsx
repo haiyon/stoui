@@ -1,7 +1,7 @@
 import './loading.css';
 
 import clsx from 'clsx';
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
 import { LoadingProps } from './loading.types';
 
@@ -9,7 +9,7 @@ const defaultProps: Partial<LoadingProps> = {
   active: false
 };
 
-const Loading: React.FC<LoadingProps> = ({ className, children, active }) => {
+const Loading: FunctionComponent<LoadingProps> = ({ className, children, active }) => {
   const cls = clsx(className, 'loading', active ? 'loading--active' : '');
   return (
     <div data-testid="loading" className={cls}>

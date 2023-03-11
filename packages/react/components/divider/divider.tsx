@@ -1,10 +1,10 @@
 import './divider.css';
 
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
 import { DividerProps } from './divider.types';
 
-const Divider: React.FC<DividerProps> = ({ foo }) => (
+const Divider: FunctionComponent<DividerProps> = ({ foo }) => (
   <div data-testid="divider" className="foo-bar">
     {foo}
   </div>
