@@ -1,8 +1,7 @@
-/* eslint-disable */
-import Component from './component';
-import Css from './css';
-import Stories from './stories';
-import Test from './test';
-import Types from './types';
+const Component = require('./component');
+const Test = require('./test');
+const Stories = require('./stories');
+const Types = require('./types');
+const Css = require('./css');
 
-export default [Component, Css, Stories, Types, Test];
+module.exports = [Component, Css, Stories, Types, Test];

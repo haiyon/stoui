@@ -1,7 +1,6 @@
 /* eslint-disable */
-import { firstUpperCase } from '../helper';
-
-export default componentName => ({
+const { firstUpperCase } = require('../helper');
+module.exports = componentName => ({
   type: 'component',
   content: `import React from 'react';
 import { ${firstUpperCase(componentName)}Props } from './${componentName}.types';
