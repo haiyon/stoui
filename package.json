@@ -21,9 +21,6 @@
     "prettier": "pnpm -r prettier",
     "format": "pnpm -r format",
     "changelog": "echo 'generate master changelog' && conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
-    "release:version": "lerna version --no-private --exact --no-changelog --no-push --no-git-tag-version",
-    "release:build": "lerna run --parallel build --no-private",
-    "release:publish": "lerna publish --no-private from-package --dist-tag next --contents dist",
     "commit": "git-cz",
     "tsc": "tsc --build"
   },
@@ -43,7 +40,6 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "husky": "^8.0.3",
-    "lerna": "^7.1.1",
     "lint-staged": "^13.2.3",
     "monorepo-run": "^0.4.2",
     "prettier": "^2.8.8",
