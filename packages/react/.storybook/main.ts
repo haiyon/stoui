@@ -10,10 +10,7 @@ const config: StorybookConfig = {
     '@storybook/addon-storysource',
     '@storybook/addon-essentials',
     {
-      name: '@storybook/addon-styling',
-      options: {
-        postCss: true
-      }
+      name: '@storybook/addon-styling'
     }
   ],
   docs: {
@@ -58,4 +55,5 @@ const config: StorybookConfig = {
     storyStoreV7: false
   }
 };
+
 export default config;
