@@ -1,4 +1,4 @@
 # https://commitlint.js.org/#/reference-configuration
 {
-  extends: ['@commitlint/config-conventional'],
+  extends: ['@commitlint/config-pnpm-scopes','@commitlint/config-conventional'],
 }
