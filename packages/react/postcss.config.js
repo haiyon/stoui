@@ -1,7 +1,8 @@
 module.exports = {
-  prefix: 'sto-',
+  prefix: 'so-',
   important: true,
   plugins: {
+    'tailwindcss/nesting': {},
     tailwindcss: {},
     autoprefixer: {}
   }
