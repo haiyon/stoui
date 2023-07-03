@@ -8,7 +8,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/haiyon/stoui.git",
-    "directory": "packages/stoui-editor"
+    "directory": "packages/editor"
   },
   "bugs": {
     "url": "https://github.com/haiyon/stoui/issues"
